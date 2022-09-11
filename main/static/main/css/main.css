@@ -1,0 +1,73 @@
+.body_background{
+    background-image: url("/static/main/img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+
+.body_text{
+    color: #bdc1c6;
+    text-align: center;
+}
+.main-main{
+    padding-top: 100px;
+}
+
+.header{
+    padding: 5px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #c6c1bd;
+}
+
+.header_section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_item{
+    padding: 0px 15px;
+    
+}
+
+a, a:hover{
+    color: #bdc1c6;
+    text-decoration: none;  
+    transition: .3s ease;  
+}
+.nav_item:hover{
+    transform:scale(1.05);
+    color: #4e5155;
+}
+
+.logo{
+    padding-top: 0;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+button{
+    border: none;
+    background: none;
+    color: unset;
+}
+
+.nav_section{
+    display: flex;
+    justify-content: center;
+}
+.nav_item{
+    padding: 0px 32px;
+}
+
+.alert{
+    opacity: 1;
+}
+
+
+.form_content{
+    display: flex;
+    justify-content: center;
+    text-align:left;
+    align-items: center;
+    flex-direction: column;
+}

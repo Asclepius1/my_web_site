@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}{{ title }}{% endblock title %}
+
+{% block content %}
+    <div class="form_content">
+        <form method="POST" autocomplete="off">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div class="form-group">
+                <button class="btn btn-success" type="submit">
+                    Регестрировать
+                </button>
+            </div>
+        </form> 
+        
+    </div>
+{% endblock %}

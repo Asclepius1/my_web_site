@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+
+{% block title %}{{ description.title }}{% endblock title %}
+
+{% block content %}
+<!--Показывает подробнее данные выбранного одежды-->
+
+<div class='des-content'>
+    <img class='des-shmot-img' src="{{ description.image.url }}"> <!--картина одежды-->
+    <div class = 'des-des'>
+        
+        <h3 class ='des-con-border'>{{ description.title }}</h3> <!--Название одежды-->
+        <div class='test'>
+        <p class =''>Качество:</p>
+        <p>high</p>
+        </div>
+        <div class='test'>
+        <p class =''>Размер:</p>
+        <p>S, M, L</p>
+        </div>
+        <h5 class ='' style="margin-top: 10px; margin-bottom: 10px;">{{ description.price }} тг</h5><!--Цена одежды-->
+        <button class='btn btn-warning btn-des'>Купить</button>
+    <div>
+</div>
+
+      
+{% endblock %}

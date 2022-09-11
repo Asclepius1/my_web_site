@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}{{ title }}{% endblock title %}
+
+{% block content %}
+    <div class="form_content">
+        <form method="POST" autocomplete="off" style="width: 400px;">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div class="form-group">
+                <button class="btn btn-success" style="margin-top:5px;" type="submit">
+                    Войти
+                </button>
+            </div>
+            <h3>У меня нет аккаунта!  <a class='btn btn-danger' href="register"> Регестрация</a></h3>
+        </form> 
+        
+    </div>
+{% endblock %}

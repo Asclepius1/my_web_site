@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block content %}
+        <!--Вывод всех одежд--> 
+
+        <div class="container">
+            <div class="shmot_content">
+                {% for el in brends %}
+                    <!--Краткое описание-->
+                    {% if pol == el.sex or not pol %} <!--Проверяет для кого-го пола одежда-->           
+                        <div class='main_viwes_shmot'>
+                            <a class = '' href="{% url 'description-shmot' el.id %}"><img class='sh_image' src="{{ el.image.url }}"><!--Показывает данные одежды-->
+                                <div class="shmot_text">
+                                    <p style='margin-bottom: 0px;'>{{ el.title }}</p><!--Название-->
+                                    <p>{{ el.price }} тг</p><!--Цена-->
+                                </div>
+                            </a>
+                        </div>
+                    {% endif %}    
+                {% endfor %}
+            </div>
+        </div>
+
+{% endblock %}
